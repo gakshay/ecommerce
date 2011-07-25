@@ -1,0 +1,64 @@
+# If you are using mssql, derby, hsqldb, h2 or oracle with one of the
+# ActiveRecord JDBC adapters, configure your database setting as the
+# example below. (Note that for oracle you will need to include the
+# driver jar on the classpath.):
+#
+#development:
+#  adapter: mssql
+#  username: <username>
+#  password: <password>
+#  host: localhost
+#  database: dummy
+
+# If you are using db2, sybase, informix or prefer to directly specify
+# the JDBC connection information, configure your database setting as
+# the example below (requires you to download and manually install the
+# database vendor's JDBC driver .jar file). See your driver
+# documentation for the apropriate driver class and connection string:
+#
+#development:
+#  adapter: jdbc
+#  username: <username>
+#  password: <password>
+#  driver: com.ibm.db2.jcc.DB2Driver
+#  url: jdbc:db2://localhost:5021/dummy
+
+# MySQL.  Versions 4.1 and 5.0 are recommended.
+#
+# Install the MySQL driver:
+#   gem install mysql
+#
+# And be sure to use new-style password hashing:
+#   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
+development:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: ecommerce_development
+  pool: 5
+  username: ecommerce 
+  password: ecommerce123
+  socket: /var/run/mysqld/mysqld.sock
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: ecommerce_test
+  pool: 5
+  username: root
+  password:
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: ecommerce_production
+  pool: 5
+  username: root
+  password:
+  socket: /var/run/mysqld/mysqld.sock
