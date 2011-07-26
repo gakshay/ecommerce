@@ -35,10 +35,23 @@ If you also want some sample products, orders, etc. to play with you can run the
     rake db:sample
 
 
+Product Reviews
+---------------
+
+Next, run the rake task that copies the necessary migrations and assets to your project:
+
+    rake spree_reviews:install
+
+And finish with a migrate:
+
+    rake db:migrate
+
+
 Browse Store
 ------------
 
 http://localhost:nnnn
+
 
 Browse Admin Interface
 ----------------------

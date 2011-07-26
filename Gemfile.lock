@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/citrus/spree_reviews.git
+  revision: 6b1988aced82a011819e5c7998fc00eb2d09f908
+  specs:
+    spree_reviews (0.50.1)
+      spree_core (>= 0.50.0)
+
+GIT
   remote: git://github.com/spree/spree-product-assembly.git
   revision: c9da1618e0a8ce200e6101358c714b57b536ede8
   branch: 0-60-stable
@@ -167,3 +174,4 @@ DEPENDENCIES
   rails (= 3.0.7)
   spree (= 0.60.0)
   spree_product_assembly!
+  spree_reviews!

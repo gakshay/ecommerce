@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110314192118) do
+ActiveRecord::Schema.define(:version => 20110406083603) do
 
   create_table "addresses", :force => true do |t|
     t.string   "firstname"
@@ -111,6 +111,18 @@ ActiveRecord::Schema.define(:version => 20110314192118) do
     t.string   "gateway_customer_profile_id"
     t.string   "gateway_payment_profile_id"
   end
+
+  create_table "feedback_reviews", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "review_id",                 :null => false
+    t.integer  "rating",     :default => 0
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "feedback_reviews", ["review_id"], :name => "index_feedback_reviews_on_review_id"
+  add_index "feedback_reviews", ["user_id"], :name => "index_feedback_reviews_on_user_id"
 
   create_table "gateways", :force => true do |t|
     t.string   "type"
@@ -299,7 +311,7 @@ ActiveRecord::Schema.define(:version => 20110314192118) do
   add_index "product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "products", :force => true do |t|
-    t.string   "name",                 :default => "",    :null => false
+    t.string   "name",                                               :default => "",    :null => false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -310,9 +322,11 @@ ActiveRecord::Schema.define(:version => 20110314192118) do
     t.datetime "deleted_at"
     t.string   "meta_description"
     t.string   "meta_keywords"
-    t.integer  "count_on_hand",        :default => 0,     :null => false
-    t.boolean  "can_be_part",          :default => false, :null => false
-    t.boolean  "individual_sale",      :default => true,  :null => false
+    t.integer  "count_on_hand",                                      :default => 0,     :null => false
+    t.boolean  "can_be_part",                                        :default => false, :null => false
+    t.boolean  "individual_sale",                                    :default => true,  :null => false
+    t.decimal  "avg_rating",           :precision => 7, :scale => 5, :default => 0.0,   :null => false
+    t.integer  "reviews_count",                                      :default => 0,     :null => false
   end
 
   add_index "products", ["available_on"], :name => "index_products_on_available_on"
@@ -393,6 +407,18 @@ ActiveRecord::Schema.define(:version => 20110314192118) do
     t.integer  "order_id"
     t.text     "reason"
     t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "reviews", :force => true do |t|
+    t.integer  "product_id"
+    t.string   "name"
+    t.string   "location"
+    t.integer  "rating"
+    t.text     "title"
+    t.text     "review"
+    t.boolean  "approved",   :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
