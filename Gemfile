@@ -21,4 +21,4 @@ gem 'spree_product_assembly', :git => 'git://github.com/spree/spree-product-asse
 gem 'spree_reviews', :git => 'git://github.com/citrus/spree_reviews.git'
 gem 'formtastic'
 gem "spree_videos", :git => "http://github.com/niamtech/spree_videos.git"
-
+gem "spree_recently_viewed", :git => 'git://github.com/kennyadsl/spree_recently_viewed.git'
