@@ -19,3 +19,6 @@ gem "jruby-openssl"
 gem "jrails"
 gem 'spree_product_assembly', :git => 'git://github.com/spree/spree-product-assembly.git', :branch => '0-60-stable' 
 gem 'spree_reviews', :git => 'git://github.com/citrus/spree_reviews.git'
+gem 'formtastic'
+gem "spree_videos", :git => "http://github.com/niamtech/spree_videos.git"
+

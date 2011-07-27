@@ -46,6 +46,32 @@ And finish with a migrate:
 
     rake db:migrate
 
+Product Videos 
+--------------
+Install
+    run `bundle install` on command or terminal
+    run `rake spree_videos:install`
+    run `rake db:migrate`
+
+How to use
+    # Go to configuration Tab > Video Type
+    # Add a new Video Type ex :
+
+    * Name : Youtube
+    * Width: 250
+    * Height : 200
+    * Embed Code : 
+
+    bc. <object width="[[WIDTH]]" height="[[HEIGHT]]"><param name="movie" value="http://www.youtube.com/v/[[KEYWORD]]"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/[[KEYWORD]]" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="[[WIDTH]]" height="[[HEIGHT]]"></embed></object>
+  
+    # Go to product edition
+    # Choose Video
+    # Add a new Video ex :
+
+    * name : "Name"
+    * Video Type : "Youtube"
+    * Keyword : "p8t41avFuCc"
+
 
 Browse Store
 ------------

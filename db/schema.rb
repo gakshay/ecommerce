@@ -178,6 +178,27 @@ ActiveRecord::Schema.define(:version => 20110406083603) do
     t.datetime "updated_at"
   end
 
+  create_table "movie_sites", :force => true do |t|
+    t.string   "name"
+    t.integer  "width"
+    t.integer  "height"
+    t.text     "embed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "movies", :force => true do |t|
+    t.string   "name"
+    t.integer  "product_id"
+    t.string   "keyword"
+    t.integer  "movie_site_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "movies", ["movie_site_id"], :name => "index_movies_on_movie_site_id"
+  add_index "movies", ["product_id"], :name => "index_movies_on_product_id"
+
   create_table "option_types", :force => true do |t|
     t.string   "name",         :limit => 100
     t.string   "presentation", :limit => 100
