@@ -22,3 +22,6 @@ gem 'spree_reviews', :git => 'git://github.com/citrus/spree_reviews.git'
 gem 'formtastic'
 gem "spree_videos", :git => "http://github.com/niamtech/spree_videos.git"
 gem "spree_recently_viewed", :git => 'git://github.com/kennyadsl/spree_recently_viewed.git'
+#gem "spree_wishlist", :git => "https://github.com/spree/spree_wishlist.git", :branch => "rails3-1"
+gem "spree_solr_search", :git => "https://github.com/romul/spree-solr-search.git"
+
