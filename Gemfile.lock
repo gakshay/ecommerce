@@ -1,9 +1,9 @@
 GIT
-  remote: git://github.com/citrus/spree_reviews.git
-  revision: 6b1988aced82a011819e5c7998fc00eb2d09f908
+  remote: git://github.com/gakshay/spree_wishlist.git
+  revision: 67cde359a5778c88d17d75f44fae602e1099877c
   specs:
-    spree_reviews (0.50.1)
-      spree_core (>= 0.50.0)
+    spree_wishlist (1.1)
+      spree_core (>= 0.30.1)
 
 GIT
   remote: git://github.com/kennyadsl/spree_recently_viewed.git
@@ -144,6 +144,7 @@ GEM
       activesupport (~> 3.0)
     rd_resource_controller (1.0.1)
     rd_unobtrusive_date_picker (0.1.0)
+    recaptcha (0.3.1)
     spree (0.60.0)
       spree_api (= 0.60.0)
       spree_auth (= 0.60.0)
@@ -176,8 +177,14 @@ GEM
       will_paginate (= 3.0.pre2)
     spree_dash (0.60.0)
       spree_core (= 0.60.0)
+    spree_email_to_friend (1.0.0)
+      recaptcha (>= 0.3.1)
+      spree_auth (>= 0.30.1)
+      spree_core (>= 0.30.1)
     spree_promo (0.60.0)
       spree_core (= 0.60.0)
+    spree_reviews (0.50.1)
+      spree_core (>= 0.50.0)
     spree_sample (0.60.0)
       spree_core (= 0.60.0)
     state_machine (0.9.4)
@@ -202,8 +209,10 @@ DEPENDENCIES
   mysql2
   rails (= 3.0.7)
   spree (= 0.60.0)
+  spree_email_to_friend (= 1.0.0)
   spree_product_assembly!
   spree_recently_viewed!
-  spree_reviews!
+  spree_reviews (= 0.50.1)
   spree_solr_search!
   spree_videos!
+  spree_wishlist!

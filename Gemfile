@@ -18,10 +18,11 @@ gem "spree", '0.60.0'
 gem "jruby-openssl"
 gem "jrails"
 gem 'spree_product_assembly', :git => 'git://github.com/spree/spree-product-assembly.git', :branch => '0-60-stable' 
-gem 'spree_reviews', :git => 'git://github.com/citrus/spree_reviews.git'
+gem 'spree_reviews', '0.50.1'
 gem 'formtastic'
 gem "spree_videos", :git => "http://github.com/niamtech/spree_videos.git"
 gem "spree_recently_viewed", :git => 'git://github.com/kennyadsl/spree_recently_viewed.git'
-#gem "spree_wishlist", :git => "https://github.com/spree/spree_wishlist.git", :branch => "rails3-1"
+gem "spree_wishlist", :git => "git://github.com/gakshay/spree_wishlist.git"
+gem "spree_email_to_friend", '1.0.0'  #:git => "git://github.com/spree/spree_email_to_friend.git"
 gem "spree_solr_search", :git => "https://github.com/romul/spree-solr-search.git"
 

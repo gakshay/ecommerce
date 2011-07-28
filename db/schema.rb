@@ -608,6 +608,24 @@ ActiveRecord::Schema.define(:version => 20110406083603) do
 
   add_index "variants", ["product_id"], :name => "index_variants_on_product_id"
 
+  create_table "wished_products", :force => true do |t|
+    t.integer  "variant_id"
+    t.integer  "wishlist_id"
+    t.text     "remark"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "wishlists", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "access_hash"
+    t.boolean  "is_private",  :default => true,  :null => false
+    t.boolean  "is_default",  :default => false, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "zone_members", :force => true do |t|
     t.integer  "zone_id"
     t.integer  "zoneable_id"

@@ -35,6 +35,9 @@ If you also want some sample products, orders, etc. to play with you can run the
     rake db:sample
 
 
+Individual Modules Settings
+---------------------------
+
 Product Reviews
 ---------------
 
@@ -72,6 +75,10 @@ How to use
     * Video Type : "Youtube"
     * Keyword : "p8t41avFuCc"
 
+Wishlist
+--------
+  `rake spree_wishlist:install`
+  `rake db:migrate`
 
 Browse Store
 ------------
@@ -83,3 +90,8 @@ Browse Admin Interface
 ----------------------
 
 http://localhost:nnnn/admin
+
+
+Tweaks
+------
+
