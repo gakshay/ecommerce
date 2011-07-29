@@ -92,6 +92,11 @@ Browse Admin Interface
 http://localhost:nnnn/admin
 
 
-Tweaks
-------
+Solr Configuration Dev Env
+--------------------------
+
+1. Clone jetty solr repo `git clone git://github.com/dcrec1/jetty-solr.git`
+2. Copy solrconfig configured to spell check to jetty solr. `cp config/solrconfig.xml <jetty-solr>/solr/config/solrconfig.xml`
+3. Run Solr `./start`
+4. App search will work to display right results
 
